@@ -1441,7 +1441,7 @@ PHP_FUNCTION(secp256k1_ecdh)
 
     unsigned char resultChars[32];
     memset(resultChars, 0, 32);
-    result = secp256k1_ecdh(ctx, resultChars, pubkey, privKey->val);
+    result = secp256k1_ecdh(ctx, resultChars, pubkey, privKey->val, NULL, NULL);
     if (result == 1) {
         zval_dtor(zResult);
         ZVAL_STRINGL(zResult, resultChars, 32);
