@@ -28,13 +28,14 @@ cd php-ext-secp256k1
 
 git clone https://github.com/bitcoin-core/secp256k1 && \
 cd secp256k1 && \
+git checkout 95e99f196fd08a8b2c236ab99d7e7fec8f6dc78f
 ./autogen.sh && \
 ./configure --enable-experimental --enable-module-ecdh --enable-module-recovery && \
 make && \
-make install
+make install 
 
 cd .. && \
-git clone https://github.com/On1x/secp256k1-php && \
+git clone https://github.com/Bit-Wasp/secp256k1-php.git && \
 cd secp256k1-php && \
 cd secp256k1 && \
 phpize && \
